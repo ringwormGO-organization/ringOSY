@@ -2,7 +2,7 @@
 # How to develop for ringOSY
 https://www.youtube.com/playlist?list=PLZQftyCk7_SeZRitx5MjBKzTtvk0pHMtp
 
-https://github.com/ringwormGO-organization/ringOS/blob/ringOSY/README.md#non-docker-build-enviroment
+https://github.com/ringwormGO-organization/ringOSY#non-docker-build-enviroment
 
 # System requiretmens for developing:
   1. Qemu (for virtual machine), (recommended)
@@ -49,6 +49,12 @@ If the above command fails, try one of the following:
 
 Alternatively, you should be able to load the operating system on a USB drive (MBR partition style) and boot into it when you turn on your computer.
 
+# Resources used:
+
+- [Code Pulse's OS DEV](https://www.youtube.com/playlist?list=PLZQftyCk7_SeZRitx5MjBKzTtvk0pHMtp)
+- [Poncho's OS DEV 1](https://www.youtube.com/playlist?list=PLxN4E629pPnKKqYsNVXpmCza8l0Jb6l8-)
+- [Poncho's OS DEV 2](https://www.youtube.com/playlist?list=PLxN4E629pPnJxCQCLy7E0SQY_zuumOVyZ)
+- Other
 
 # NON-DOCKER BUILD ENVIROMENT
 
