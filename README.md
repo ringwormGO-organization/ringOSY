@@ -1,27 +1,37 @@
 
-# How to develop for ringOSY
-https://www.youtube.com/playlist?list=PLZQftyCk7_SeZRitx5MjBKzTtvk0pHMtp
+# ringOSY
+ringOSY is ringwormGO operating system with supprot BIOS boot mode only.
 
-https://github.com/ringwormGO-organization/ringOSY#non-docker-build-enviroment
+ringOSY is keyboard oriented operating system with GUI elements.
 
-# System requiretmens for developing:
+This repo is for developing and invitation new contributors for this project.
+
+![image](https://user-images.githubusercontent.com/83548580/147407266-769a5ef0-7c58-4c84-86c7-5bd4bfa633b4.png)
+
+# ringOS
+https://github.com/ringwormGO-organization/ringOS
+
+### Contributing and issues
+If you have problem or idea create issue or check [for existing issues](https://github.com/davidcallanan/os-series).
+
+If you want contribute in this project create Pull Request.
+
+# Build and compile
+
+## System requiretmens for developing:
   1. Qemu (for virtual machine), (recommended)
-  2. WSL 2
+  2. WSL 2 (if you use Windows)
   3. Docker Desktop
   4. Visual Studio Code
   5. Rufus (for real hardware)
-  6. Powershell (if you use Windows)
   
 If you have problem with running ringOSY, create new issue or check out https://github.com/davidcallanan/os-series
 
-
 ## Setup
-
 Build an image for our build-environment:
  - `docker build buildenv -t ringosy`
 
 ## Build
-
 Enter build environment:
  - Linux or MacOS: `docker run --rm -it -v "$(pwd)":/root/env ringosy`
  - Windows (CMD): `docker run --rm -it -v "%cd%":/root/env ringosy`
@@ -36,7 +46,6 @@ Build for x86 (other architectures may come in the future):
 To leave the build environment, enter `exit`.
 
 ## Emulate
-
 You can emulate your operating system using [Qemu](https://www.qemu.org/): (Don't forget to [add qemu to your path](https://dev.to/whaleshark271/using-qemu-on-windows-10-home-edition-4062#:~:text=2.-,Add%20Qemu%20path%20to%20environment%20variables%20settings,-Copy%20the%20Qemu)!)
 
  - `qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso`
@@ -50,7 +59,6 @@ If the above command fails, try one of the following:
 Alternatively, you should be able to load the operating system on a USB drive (MBR partition style) and boot into it when you turn on your computer.
 
 # Resources used:
-
 - [Code Pulse's OS DEV](https://www.youtube.com/playlist?list=PLZQftyCk7_SeZRitx5MjBKzTtvk0pHMtp)
 - [Poncho's OS DEV 1](https://www.youtube.com/playlist?list=PLxN4E629pPnKKqYsNVXpmCza8l0Jb6l8-)
 - [Poncho's OS DEV 2](https://www.youtube.com/playlist?list=PLxN4E629pPnJxCQCLy7E0SQY_zuumOVyZ)
@@ -64,6 +72,7 @@ This work on native Linux and WSL
 
 Type all commands in terminal:
 
+```
 sudo apt update
 
 sudo apt install build-essential
@@ -125,7 +134,7 @@ sudo make all-target-libgcc
 sudo make install-gcc
 
 sudo make install-target-libgcc
-
+```
 -----------
 
 Now you need add folder to variable.
@@ -140,6 +149,6 @@ ringOSY compile with: ```make build-x86_64```.
 
 _________
 
-Thanks for choosing ringOSY
+Thank you for choosing ringOSY
 
 ©2021 ringwormGO
