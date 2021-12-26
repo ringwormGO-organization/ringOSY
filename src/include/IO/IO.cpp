@@ -14,6 +14,13 @@ void outb(unsigned short port, unsigned char val)
   asm volatile ("outb %0, %1" : : "a"(val), "Nd"(port));
 }
 
+void outw(unsigned short int port, unsigned short int data)
+{
+	asm volatile("outw %%ax, %%dx"
+				 :
+				 : "d"(port), "a"(data));
+}
+
 unsigned char inb(unsigned short port)
 {
   unsigned char returnVal;
@@ -21,6 +28,11 @@ unsigned char inb(unsigned short port)
   : "=a"(returnVal)
   : "Nd"(port));
   return returnVal;
+}
+
+void io_wait()
+{
+    asm volatile ("outb %%al, $0x80" : : "a"(0));
 }
 
 void RemapPic()

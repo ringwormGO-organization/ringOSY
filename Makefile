@@ -7,15 +7,15 @@ x86_64_c_object_files := $(patsubst src/include/%.cpp, build/include/%.o, $(x86_
 x86_64_asm_source_files := $(shell find src/boot -name *.asm)
 x86_64_asm_object_files := $(patsubst src/boot/%.asm, build/boot/%.o, $(x86_64_asm_source_files))
 
-x86_64_object_files := $(x86_64_c_object_files) $(x86_64_asm_object_files)
+x86_64_object_files := $(x86_64_c_object_files) $(x86_64_asm_object_files) $(kernel_asm_object_files)
 
 $(kernel_object_files): build/kernel/%.o : src/kernel/%.cpp
 	mkdir -p $(dir $@) && \
-	x86_64-elf-gcc -c -I src/kernel -ffreestanding $(patsubst build/kernel/%.o, src/kernel/%.cpp, $@) -o $@
+	x86_64-elf-g++ -c -I src/kernel -ffreestanding $(patsubst build/kernel/%.o, src/kernel/%.cpp, $@) -o $@
 
 $(x86_64_c_object_files): build/include/%.o : src/include/%.cpp
 	mkdir -p $(dir $@) && \
-	x86_64-elf-gcc -c -I src/include -ffreestanding $(patsubst build/include/%.o, src/include/%.cpp, $@) -o $@
+	x86_64-elf-g++ -c -I src/include -ffreestanding $(patsubst build/include/%.o, src/include/%.cpp, $@) -o $@
 
 $(x86_64_asm_object_files): build/boot/%.o : src/boot/%.asm
 	mkdir -p $(dir $@) && \
