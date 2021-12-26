@@ -6,6 +6,9 @@ ringOSY is keyboard oriented operating system with GUI elements.
 
 This repo is for developing and invitation new contributors for this project.
 
+# ringOS
+https://github.com/ringwormGO-organization/ringOS
+
 ### Contributing and issues
 If you have problem or idea create issue or check [for existing issues](https://github.com/davidcallanan/os-series).
 
@@ -13,7 +16,7 @@ If you want contribute in this project create Pull Request.
 
 # Build and compile
 
-# System requiretmens for developing:
+## System requiretmens for developing:
   1. Qemu (for virtual machine), (recommended)
   2. WSL 2 (if you use Windows)
   3. Docker Desktop
