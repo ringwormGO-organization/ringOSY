@@ -8,6 +8,8 @@ This repo is for developing and invitation new contributors for this project.
 
 ![image](https://user-images.githubusercontent.com/83548580/147407266-769a5ef0-7c58-4c84-86c7-5bd4bfa633b4.png)
 
+[ringOSY stable version 1](https://github.com/ringwormGO-organization/ringOS/releases/tag/ringOSY1)
+
 ## ringOS
 https://github.com/ringwormGO-organization/ringOS
 
