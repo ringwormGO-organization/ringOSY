@@ -16,6 +16,80 @@ If you have problem or idea create issue or check [for existing issues](https://
 
 If you want contribute in this project create Pull Request.
 
+# Checklist
+### Bootloaders
+- [x] GRUB
+- [ ] Limine (we left developing Limine)
+
+### Framebuffer info and printing to the screen
+- [ ] Framebuffer info
+- [x] Printing to the screen
+- [x] ```\n``` implementaion
+
+### Memory
+- [ ] Bitmap
+- [ ] Paging
+- [ ] ```malloc``` and ```free```
+
+### Interrupts and IO
+- [ ] GDT
+- [ ] IDT
+- [ ] Exceptions
+- [ ] Panic screen
+- [x] IO
+- [ ] Keyboard
+- [ ] Mouse
+
+### Virtual Machine supprot
+- [ ] VMWare Tools
+- [ ] Virtual Box Additions
+
+### File systems
+- [ ] VFS
+- [ ] DEVFS
+- [ ] FAT32
+- [ ] NTFS
+- [ ] ISO9660
+- [ ] Ext2
+- [ ] Ext4
+
+### Storage
+
+- [ ] SATA
+- [ ] IDE
+- [ ] NVMe
+
+### Timers
+- [ ] PIT
+
+### Shell
+- [ ] Shell
+
+### GUI - Windowing system
+- [ ] Framebuffer windowing-system
+- [ ] BMP images
+- [ ] TGA images
+- [ ] Own scripting language for GUI
+
+### User Mode
+- [ ] Ring3
+- [ ] TSS
+- [ ] ELF
+- [ ] syscall
+- [ ] Task Manager
+
+### Other
+- [ ] ACPI
+- [ ] AHCI
+- [ ] Audio
+- [ ] Book
+- [ ] Networking
+- [ ] Own build tool
+- [x] Real hardware support
+- [ ] PCI
+- [ ] PCIe
+- [ ] USB
+
 # Build and compile
 
 ## System requiretmens for developing:
