@@ -2,6 +2,7 @@
 #pragma once
 
 #include "../include/BasicRenderer/print.h"
+#include "../include/BasicRenderer/printf.h"
 #include "../include/IO/IO.h"
 #include "../include/shutdown/shutdown.h"
 

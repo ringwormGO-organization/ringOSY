@@ -12,9 +12,9 @@ void PrintStuff()
 {
     print_clear();
     print_set_color(PRINT_COLOR_YELLOW, PRINT_COLOR_BLACK);
-    print_str("Welcome to ringOSY!!\n");
+    printf("Welcome to ringOSY!!\n");
     print_set_color(PRINT_COLOR_CYAN, PRINT_COLOR_BLACK);
-    print_str(to_string(320));
+    printf(to_string(320));
     SetCursorPosition(1000);
     print_set_color(PRINT_COLOR_RED, PRINT_COLOR_WHITE);
     print_str2("Test");
