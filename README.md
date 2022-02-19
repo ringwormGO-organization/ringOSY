@@ -105,14 +105,15 @@ If you have problem with running ringOSY, create new issue or check out https://
 
 ## Setup
 Build an image for our build-environment:
- - `docker build buildenv -t ringosy`
+ - `docker build buildenv -t ringosy` - Windows
+ - `sudo docker build buildenv -t ringosy` - Linux
 
 ## Build
 Enter build environment:
- - Linux or MacOS: `docker run --rm -it -v "$(pwd)":/root/env ringosy`
+ - Linux or MacOS: `sudo docker run --rm -it -v "$(pwd)":/root/env ringosy`
  - Windows (CMD): `docker run --rm -it -v "%cd%":/root/env ringosy`
  - Windows (PowerShell): `docker run --rm -it -v "${pwd}:/root/env" ringosy`
- - Please use the linux command if you are using `WSL`, `msys2` or `git bash`
+ - Please use the Linux command if you are using `WSL`, `msys2` or `git bash`
  - NOTE: If you are having trouble with an unshared drive, ensure your docker daemon has access to the drive you're development environment is in. For Docker Desktop, this is in "Settings > Shared Drives" or "Settings > Resources > File Sharing".
 
 Build for x86 (other architectures may come in the future):
