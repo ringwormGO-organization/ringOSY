@@ -6,7 +6,6 @@ RUN apt-get install -y nasm
 RUN apt-get install -y xorriso
 RUN apt-get install -y grub-pc-bin
 RUN apt-get install -y grub-common
-RUN apt-get install -y qemu-system-x86
 
 VOLUME /root/env
 WORKDIR /root/env
