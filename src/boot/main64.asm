@@ -2,7 +2,7 @@ global long_mode_start
 extern kernel_main
 
 section .text
-bits64
+bits 64
 long_mode_start:
     ; Initlize the registers
     mov ax, 0

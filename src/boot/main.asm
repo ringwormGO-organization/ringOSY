@@ -1,5 +1,5 @@
-global start
-extern long_mode_start
+GLOBAL start
+EXTERN long_mode_start
 
 section .text
 bits 32

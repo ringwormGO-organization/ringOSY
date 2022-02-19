@@ -1,11 +1,14 @@
 // Includes
-#include "print.h"
+#include "print.hpp"
 
 // Screen size
 const static size_t NUM_COLS = 80; // Screen Colomns
 const static size_t NUM_ROWS = 25; // Screen Rows
 
-// Charator information
+#define VGA_MEMORY (uint8_t*)0xb8000
+#define VGA_WIDTH 80
+
+// Character information
 struct Char 
 {
     uint8_t character;
@@ -14,9 +17,6 @@ struct Char
 
 // Screen buffer address
 struct Char* buffer = (struct Char*) 0xb8000;
-
-#define VGA_MEMORY (uint8_t*)0xb8000
-#define VGA_WIDTH 80
 
 // Cursor information
 size_t col = 0; // Current cursor coloum
@@ -41,7 +41,8 @@ void clear_row(size_t row)
 }
 
 // Clear the entire screen
-void print_clear() {
+void clear() 
+{
     for (size_t i = 0; i < NUM_ROWS; i++) 
     {
         clear_row(i);
@@ -71,7 +72,6 @@ void print_newline()
 
 void print_char(char character) 
 {
-
     if (character == '\n') 
     {
         print_newline();
